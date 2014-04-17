@@ -377,7 +377,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ARNDeferred/ARNDeferred-Prefix.pch";
+				GCC_PREFIX_HEADER = "ARNDeferred-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -398,7 +398,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ARNDeferred/ARNDeferred-Prefix.pch";
+				GCC_PREFIX_HEADER = "ARNDeferred-Prefix.pch";
 				INFOPLIST_FILE = "ARNDeferredTests/ARNDeferredTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
