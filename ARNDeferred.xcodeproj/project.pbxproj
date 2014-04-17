@@ -384,6 +384,7 @@
 				);
 				INFOPLIST_FILE = "ARNDeferredTests/ARNDeferredTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
