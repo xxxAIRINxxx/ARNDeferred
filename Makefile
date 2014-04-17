@@ -1,5 +1,6 @@
 PROJECT=ARNDeferred.xcodeproj
 SCHEME=ARNDeferred
+TEST_SCHEME=ARNDeferredTests
 
 default: clean build test
 
@@ -19,7 +20,7 @@ build:
 test:
 		xctool \
 		-project ${PROJECT} \
-		-scheme ${SCHEME} \
+		-scheme ${ARNDeferredTests} \
 		test \
 		-test-sdk iphonesimulator \
 		-parallelize
