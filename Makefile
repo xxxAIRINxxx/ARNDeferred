@@ -20,7 +20,7 @@ build:
 test:
 		xctool \
 		-project ${PROJECT} \
-		-scheme ${TEST_SCHEME} \
+		-scheme ${SCHEME} \
 		test \
-		-test-sdk iphonesimulator7.0 \
+		-test-sdk iphonesimulator \
 		-parallelize
