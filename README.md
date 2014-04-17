@@ -1,6 +1,8 @@
 ARNDeferred
 ============
 
+[![Build Status](https://travis-ci.org/xxxAIRINxxx/ARNDeferred.svg?branch=master)](https://travis-ci.org/xxxAIRINxxx/ARNDeferred)
+
 I aimed at the implementation of futures and promises and jQuery.Deferred.
 
 but, It is only implemented then currently...
