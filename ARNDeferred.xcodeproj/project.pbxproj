@@ -48,7 +48,7 @@
 		7A969A6118FE1A8200DF7FB9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7A969A7C18FE1A8200DF7FB9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7A969AAA18FE1BD300DF7FB9 /* libARNDeferred.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libARNDeferred.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A969AAE18FE1BD300DF7FB9 /* ARNDeferred-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARNDeferred-Prefix.pch"; sourceTree = "<group>"; };
+		7A969AAE18FE1BD300DF7FB9 /* ARNDeferred-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ARNDeferred-Prefix.pch"; path = "../ARNDeferred-Prefix.pch"; sourceTree = "<group>"; };
 		7A969AAF18FE1BD300DF7FB9 /* ARNDeferred.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARNDeferred.h; sourceTree = "<group>"; };
 		7A969AB118FE1BD300DF7FB9 /* ARNDeferred.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARNDeferred.m; sourceTree = "<group>"; };
 		7A969AB718FE1BD300DF7FB9 /* ARNDeferredTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARNDeferredTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -343,7 +343,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/ARNDeferred.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ARNDeferred/ARNDeferred-Prefix.pch";
+				GCC_PREFIX_HEADER = "ARNDeferred-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -360,7 +360,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/ARNDeferred.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ARNDeferred/ARNDeferred-Prefix.pch";
+				GCC_PREFIX_HEADER = "ARNDeferred-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
