@@ -22,5 +22,5 @@ test:
 		-project ${PROJECT} \
 		-scheme ${TEST_SCHEME} \
 		test \
-		-test-sdk iphonesimulator \
+		-test-sdk iphonesimulator6.1 \
 		-parallelize
