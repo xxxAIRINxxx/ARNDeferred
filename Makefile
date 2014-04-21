@@ -1,8 +1,7 @@
 PROJECT=ARNDeferred.xcodeproj
 SCHEME=ARNDeferred
-TEST_SCHEME=ARNDeferredTests
 
-default: clean build test
+default: clean build
 
 clean:
 		xctool \
