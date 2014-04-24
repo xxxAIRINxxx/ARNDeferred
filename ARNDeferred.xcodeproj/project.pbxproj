@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A7D487D1908A08A005FC096 /* ARNDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A969AB118FE1BD300DF7FB9 /* ARNDeferred.m */; };
+		7A7D487E1908A090005FC096 /* ARNDeferredTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A969ACD18FE1ED600DF7FB9 /* ARNDeferredTask.m */; };
 		7A969AAB18FE1BD300DF7FB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A969A5D18FE1A8200DF7FB9 /* Foundation.framework */; };
 		7A969AB018FE1BD300DF7FB9 /* ARNDeferred.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7A969AAF18FE1BD300DF7FB9 /* ARNDeferred.h */; };
 		7A969AB218FE1BD300DF7FB9 /* ARNDeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A969AB118FE1BD300DF7FB9 /* ARNDeferred.m */; };
@@ -242,6 +244,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7D487E1908A090005FC096 /* ARNDeferredTask.m in Sources */,
+				7A7D487D1908A08A005FC096 /* ARNDeferred.m in Sources */,
 				7A969AC518FE1BD300DF7FB9 /* ARNDeferredTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
