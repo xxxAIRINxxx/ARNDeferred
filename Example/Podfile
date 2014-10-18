@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ARNDeferred', :exclusive => true do
+  pod "ARNDeferred", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "ARNDeferred", :path => "../"
+
+  pod 'Specta', '~> 0.2.1'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+end

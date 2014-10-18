@@ -1,7 +1,9 @@
-ARNDeferred
-============
+# ARNDeferred
 
-[![Build Status](https://travis-ci.org/xxxAIRINxxx/ARNDeferred.svg?branch=master)](https://travis-ci.org/xxxAIRINxxx/ARNDeferred)
+[![CI Status](http://img.shields.io/travis/xxxAIRINxxx/ARNDeferred.svg?style=flat)](https://travis-ci.org/xxxAIRINxxx/ARNDeferred)
+[![Version](https://img.shields.io/cocoapods/v/ARNDeferred.svg?style=flat)](http://cocoadocs.org/docsets/ARNDeferred)
+[![License](https://img.shields.io/cocoapods/l/ARNDeferred.svg?style=flat)](http://cocoadocs.org/docsets/ARNDeferred)
+[![Platform](https://img.shields.io/cocoapods/p/ARNDeferred.svg?style=flat)](http://cocoadocs.org/docsets/ARNDeferred)
 
 I aimed at the implementation of futures and promises and jQuery.Deferred.
 
@@ -9,24 +11,19 @@ but, It is only implemented then currently...
 
 ARNDeferred is Simple.
 
-Welcome Pull Request!
-
-Features
-============
+## Features
 
 Features of ARNDeferred is the following
 
-* then is called to order.
+* Then is called to order.
 
-* resolved and rejected only one.
+* Resolved and rejected only one.
 
 * If you cancel, then and resolved and rejected also not called.
 
-* completion is called only once at the end always.
+* Completion is called only once at the end always.
 
-
-Respect
-============
+## Respect
 
 It was inspired by the following products.
 
@@ -36,123 +33,112 @@ It was inspired by the following products.
 
 * [Sequencer](https://github.com/berzniz/Sequencer)
 
+## Usage
 
-Requirements
-============
-
-ARNDeferred requires iOS 5.0 and above, and uses ARC.
-
-
-How To Use
-============
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ### then resolve
 ```objectivec
 
-    ARNDeferred *def = [ARNDeferred deferred];
-    def.then (^(ARNDeferredTask *task, id resultObject) {
-      // call
-      // resultObject -> @"test"
-      [task done:@"test2"];
-    });
-    def.then (^(ARNDeferredTask *task, id resultObject) {
-        // call
-        // resultObject -> @"test2"
-        [task done:@"test3"];
-    });
-    def.resolved (^(id resultObject){
-        // call
-        // resultObject -> @"test3"
-    });
-    def.rejected (^(id resultObject){
-        // not call
-    });
-    def.canceller (^(id resultObject){
-        // not call
-    });
-    def.completion (^{
-        // call
-    });
-    [def runDeferred:@"test"];
+ARNDeferred *def = [ARNDeferred deferred];
+def.then (^(ARNDeferredTask *task, id resultObject) {
+// call
+// resultObject -> @"test"
+[task done:@"test2"];
+});
+def.then (^(ARNDeferredTask *task, id resultObject) {
+// call
+// resultObject -> @"test2"
+[task done:@"test3"];
+});
+def.resolved (^(id resultObject){
+// call
+// resultObject -> @"test3"
+});
+def.rejected (^(id resultObject){
+// not call
+});
+def.canceller (^(id resultObject){
+// not call
+});
+def.completion (^{
+// call
+});
+[def runDeferred:@"test"];
 
 ```
 
 ### then reject
 ```objectivec
 
-    ARNDeferred *def = [ARNDeferred deferred];
-    def.then (^(ARNDeferredTask *task, id resultObject) {
-      // call
-      // resultObject -> @"test"
-      [task fail:@"test2"];
-    });
-    def.then (^(ARNDeferredTask *task, id resultObject) {
-        // not call
-    });
-    def.resolved (^(id resultObject){
-        // not call
-    });
-    def.rejected (^(id resultObject){
-        // call
-        // resultObject -> @"test2"
-    });
-    def.canceller (^(id resultObject){
-        // not call
-    });
-    def.completion (^{
-        // call
-    });
-    [def runDeferred:@"test"];
+ARNDeferred *def = [ARNDeferred deferred];
+def.then (^(ARNDeferredTask *task, id resultObject) {
+// call
+// resultObject -> @"test"
+[task fail:@"test2"];
+});
+def.then (^(ARNDeferredTask *task, id resultObject) {
+// not call
+});
+def.resolved (^(id resultObject){
+// not call
+});
+def.rejected (^(id resultObject){
+// call
+// resultObject -> @"test2"
+});
+def.canceller (^(id resultObject){
+// not call
+});
+def.completion (^{
+// call
+});
+[def runDeferred:@"test"];
 
 ```
 
 ### then cancel
 ```objectivec
 
-    ARNDeferred *def = [ARNDeferred deferred];
-    def.then (^(ARNDeferredTask *task, id resultObject) {
-      // call
-      // resultObject -> @"test"
-      [task cancel:@"test2"];
-    });
-    def.then (^(ARNDeferredTask *task, id resultObject) {
-        // not call
-    });
-    def.resolved (^(id resultObject){
-        // not call
-    });
-    def.rejected (^(id resultObject){
-        // not call
-    });
-    def.canceller (^(id resultObject){
-        // call
-        // resultObject -> @"test2"
-    });
-    def.completion (^{
-        // call
-    });
-    [def runDeferred:@"test"];
+ARNDeferred *def = [ARNDeferred deferred];
+def.then (^(ARNDeferredTask *task, id resultObject) {
+// call
+// resultObject -> @"test"
+[task cancel:@"test2"];
+});
+def.then (^(ARNDeferredTask *task, id resultObject) {
+// not call
+});
+def.resolved (^(id resultObject){
+// not call
+});
+def.rejected (^(id resultObject){
+// not call
+});
+def.canceller (^(id resultObject){
+// call
+// resultObject -> @"test2"
+});
+def.completion (^{
+// call
+});
+[def runDeferred:@"test"];
 
 ```
 
+## Requirements
 
-Licensing
-============
+* iOS 5.0+
+* ARC
 
-The source code is distributed under the nonviral MIT License.
+## Installation
 
- It's the simplest most permissive license available.
+ARNDeferred is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
+    pod "ARNDeferred"
 
-Japanese Note
-============
+## License
 
-jQuery.Deferred.のようなfutures/promisesパターンを実装したく試行錯誤した結果物です。
+ARNDeferred is available under the MIT license. See the LICENSE file for more info.
 
-thenしか実装してませんが。。
-
-実際に組み込むならRespectで挙げたライブラリ等を使った方が良いかと。。
-
-分かりやすさだけが強みだと思っています。実装の参考程度にして下さい。
-
-プルリクお待ちしています！
