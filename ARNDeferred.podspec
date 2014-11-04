@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ARNDeferred"
-  s.version          = "0.2.1"
+  s.version          = "0.2.0"
   s.summary          = "Implementation of Futures and Promises and jQuery.Deferred."
   s.homepage         = "https://github.com/xxxAIRINxxx/ARNDeferred"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '5.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/*.{h,m}'
+  s.source_files = 'Pod/Classes/'
   s.resource_bundles = {
     'ARNDeferred' => ['Pod/Assets/*.png']
   }
